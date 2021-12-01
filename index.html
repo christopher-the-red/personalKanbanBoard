@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Christopher's Personal Kanban Board</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="kanban-title">
+        <strong class="kanban-title-text">Kanban Board</strong>
+      </div>
+      <div class="kanban-board">
+        <div class="kanban-block" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <strong>To Do</strong>
+          <div class="task-button-block">
+            <button id="task-button" onclick="createTask()">Create New Task</button>
+          </div>
+          <div class="task" id="task1" draggable="true" ondragstart="drag(event)">
+            <span>Task 1</span>
+          </div>
+          <div class="task" id="task2" draggable="true" ondragstart="drag(event)">
+            <span>Task 2</span>
+          </div>
+          <div class="task" id="task3" draggable="true" ondragstart="drag(event)">
+            <span>Task 3</span>
+          </div>
+        </div>
+        <div class="kanban-block" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <strong>In Progress</strong>
+        </div>
+        <div class="kanban-block" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <strong>Done</strong>
+        </div>
+        <div class="kanban-block" id="blocked" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <strong>Blocked</strong>
+        </div>
+        <!--Creating the new task panel is basically the same as creating a contact form, something I did back in Week 8-->
+        <div class="create-new-task-block" id="create-new-task-block">
+          <strong>New Task</strong>
+          <span class="form-row">
+            <label class="form-row-label" for="task-name">Task</label>
+            <input class="form-row-input" type="text" name="task-name" id="task-name">
+          </span>
+          <span class="form-row">
+            <label class="form-row-label" for="task-name">Description</label>
+            <textarea class="form-row-input" name="task-description" id="task-description" cols="70" rows="10"></textarea>
+          </span>
+          <span class="form-row">
+            <label class="form-row-label" for="task-name">Status</label>
+            <select class="form-row-input" name="task-status" id="task-status">
+              <option value="todo">To Do</option>
+              <option value="inprogress">In Progress</option>
+              <option value="done">Done</option>
+              <option value="blocked">Blocked</option>
+            </select>
+          </span>
+          <span class="form-row-buttons">
+            <button id="edit-button" onclick="editTask()">Edit</button>
+            <button id="save-button" onclick="saveTask()">Save</button>
+            <button id="cancel-button" onclick="createTask()">Cancel</button>
+          </span>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

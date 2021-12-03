@@ -4,6 +4,9 @@
 
 <p>I created the board itself and gave it the usual sections one would find on any kanban board: <b>To Do</b>, <b>In Progress</b>, <b>Done</b> and <b>Blocked</b>. Then I separated those into sections with HTML, colored them and created sample tasks. I added some code to allow the user to drag and drop tasks into the different sections as well as a button to create a new task. The form for creating a new task wasn't so hard to make in HTML, as it was basically the same thing as creating a contact form on a website so I followed the steps to do that. The trickier part came when getting the function for saving new tasks to work.</p>
 
+<h2><b>Additional Learnings</b></h2>
+I came into this project with a decent enough level of knowledge of HTML and a bit less of CSS and Javascript, all of which were supplemented by what we had covered in CS50. For this project, I had learned how to create overlays and separate panels in order to create new tasks. I also learned several more of the different values and units within CSS to make things a bit prettir on the front end.
+
 <h2><b>Further Plans</h2></b>
 <p>Currently, the board is lacking in a few features. If I were to continue working on it, I'd love to add a way to create multiple boards (each for their own projects) similar to something like Trello. I'd also loveto get some more front end practice in at some point and really pretty the board up since it looks quite plain in its current state.</p>
 

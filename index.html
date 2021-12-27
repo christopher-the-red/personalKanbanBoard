@@ -7,37 +7,40 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="new-task-window" id="new-task-form">
+    <div class="new-task-window" id="new_task_form">
       <div class="header">
         <div class="title">New Task</div>
-        <button class="btn-close-window" data-target="#new-task-form">&times;</button>
+        <button class="btn-close-window" data-target="#new_task_form">X</button>
       </div>
       <div class="body">
         <input type="text" id="new-task-name" />
-        <input type="submit" value="+ New Task" id="new-task-submit" />
+        <input type="submit" value="New Task" id="new-task-submit" />
       </div>
     </div>
-    
+
     <!--Kanban Board-->
     <div class="kanban-container">
       <div class="kanban-container-section" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <strong>To Do</strong> 
+        <strong>To Do</strong>
         <div class="task-button-block">
-            <button class="task-button" id="task-button" data-target="#new-task-form">+ New Task</button>
+            <button class="task-button" id="task-button" data-target="#new_task_form">+ New Task</button>
         </div>
         <div class="task" id="task1" draggable="true" ondragstart="drag(event)">
-          <span>Task #1</span>
+          <span contenteditable="true">Task #1</span>
+            <!--<button class="edit_button" id="edit_button">Edit</button>-->
         </div>
         <div class="task" id="task2" draggable="true" ondragstart="drag(event)">
-          <span>Task #2</span>
+          <span contenteditable="true">Task #2</span>
         </div>
         <div class="task" id="task3" draggable="true" ondragstart="drag(event)">
-          <span>Task #3</span>
+          <span contenteditable="true">Task #3</span>
         </div>
         <div class="task" id="task4" draggable="true" ondragstart="drag(event)">
-          <span>Task #4</span>
+          <span contenteditable="true">Task #4</span>
         </div>
-        
+
+
+
       </div>
       <div class="kanban-container-section" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
         <strong>In Progress</strong>
@@ -49,7 +52,7 @@
       </div>
       <div class="kanban-container-section" id=" blocked" ondrop="drop(event)" ondragover="allowDrop(event)">
         <strong>Blocked</strong>
-        
+
       </div>
     </div>
     <div id="overlay"></div>

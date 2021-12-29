@@ -1,90 +1,152 @@
 .kanban-container {
-    display: grid;
-    grid-auto-columns: 272px;
-    grid-auto-flow: column;
-    grid-gap: 8px;
-    height: 100vh;
-    overflow: auto;
-  }
-  
-  .kanban-container-section {
-    background: #EBEBEB;
-    border-radius: 3px;
-    display: grid;
-    grid-auto-rows: max-content;
-    grid-gap: 10px;
-    padding: 10px;
-  }
-  
-  .kanban-container-section strong {
-    background: #2C89BF;
-    font-size: 16px;
-    margin: 0 0 12px 0;
-    padding: 10px;
-  }
-  
-  .task {
-    background: #FFFFFF;
-    box-shadow: 0 1px 0 rgba(9,30,66,.25);
-    border-radius: 3px;
-    padding: 10px;
-  }
-  
-  .task-button {
-    width: 40%;
-    position: bottom;
-    background: #FFFFFF;
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(9,30,66,.25);
-    border: 0.1rem;
-    cursor: pointer;
-  }
-  
-  .task.button:active {
-    transform: scale(0.9);
-  }
-  
-  .btn-close-window {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .new-task-window {
-    width: 450px;
-    position: fixed;
-    top: -50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid #ccc;
-    z-index: 2;
-    background-color:#FFFFFF;
-  }
-  
-  .new-task-window.active {
-    top: 15%;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    background-color: rgba(0, 0, 0, 0.03);
-    border-bottom: 1px solid #ccc;
-  }
-  
-  #overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  
-  #overlay.active {
-    display: block;
-  }
+  display: grid;
+  grid-auto-columns: 250px;
+  grid-auto-flow: column;
+  grid-gap: 8px;
+  height: 100vh;
+  overflow: auto;
+}
+
+.kanban-container-section {
+  background: #EBEBEB;
+  border-radius: 3px;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.kanban-container-section2 {
+  background: rgb(146, 179, 230);
+  border-radius: 3px;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.kanban-container-section3 {
+  background: rgb(80, 202, 121);
+  border-radius: 3px;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.kanban-container-section4 {
+  background: rgb(199, 111, 111);
+  border-radius: 3px;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.kanban-container-section strong {
+  background: rgb(179, 194, 202);
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  padding: 10px;
+}
+
+.kanban-container-section2 strong {
+  background: #2C89BF;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  padding: 10px;
+}
+
+.kanban-container-section3 strong {
+  background: rgb(9, 156, 58);
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  padding: 10px;
+}
+
+.kanban-container-section4 strong {
+  background: rgb(191, 44, 44);
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  padding: 10px;
+}
+
+.task {
+  background: #FFFFFF;
+  box-shadow: 0 1px 0 rgba(9,30,66,.25);
+  border-radius: 3px;
+  padding: 10px;
+  position: relative;
+}
+
+.task-button {
+  width: 40%;
+  background: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(9,30,66,.25);
+  border: 0.1rem;
+  cursor: pointer;
+}
+
+.task.button:active {
+  transform: scale(0.9);
+}
+
+.btn-close-window {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.new-task-window {
+  width: 450px;
+  position: fixed;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  z-index: 2;
+  background-color:#FFFFFF;
+}
+
+.new-task-window.active {
+  top: 15%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid #ccc;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#overlay.active {
+  display: block;
+}
+
+#new-task-name, #new-task-submit {
+  padding: 1rem 1rem;
+  width: 90%;
+  margin: 0.25rem;
+  align-items: center;
+}
+
+#new-task-submit {
+  background-color: #2C89BF;
+  border: none;
+  color: #FFFFFF;
+  align-items: center;
+}

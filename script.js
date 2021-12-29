@@ -30,3 +30,38 @@ function drop(ev) {
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
 }
+
+const new_task_submit = document.getElementById("new-task-submit");
+if(new_task_submit) {
+  new_task_submit.addEventListener('click', createTask);
+}
+
+function createTask() {
+  const task_div = document.createElement("div");
+  const input_value = document.getElementById("new-task-name").value;
+
+  //Take the text from the above input and create a task with that text.
+  const text = document.createTextNode(input_value);
+
+  task_div.appendChild(text);
+  //Add the proper class (task in this case) to the newly created task.
+  task_div.classList.add("task");
+
+  //Assign an id to the newly created task.
+  task_div.id = "task";
+
+  //Add the draggable attribute to the newly created task and set it to true to allow drag and drop.
+  if(task_div){
+    task_div.setAttribute("draggable", "true");
+    task_div.setAttribute("contenteditable", "true");
+    task_div.setAttribute("ondragstart", "drag(event)");
+  }
+
+  //Add the new task to the To Do section of the Kanban Board.
+  const todo = document.getElementById("todo");
+  todo.appendChild(task_div);
+
+  document.getElementById("new-task-name").value = "";
+  new_task_form.classList.remove("active");
+  overlay.classList.remove("active");
+}
